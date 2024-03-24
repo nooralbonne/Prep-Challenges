@@ -59,14 +59,21 @@ console.log(sumNums(arr));
 // Output: ['Python','Ruby','JS','C#']
 
 
-arr=['C#', 'JS', 'Ruby','Python'];
+/*arr=['C#', 'JS', 'Ruby','Python'];
 const reverseArray = (arr)=>{
     let arr2=[];
     for(let i=arr.length-1 ; i>=0 ; i--){
     arr2.push(arr[i]);
     }
     arr=arr2;
-    return arr;
+    return arr;*/
+    const reverseArray= (arr)=>{
+        let x= arr.length -1;
+        let arr2= [];
+        for (let i = 0; i<arr.length ;i++){
+            arr2[i] = arr[x-i];
+    }
+    return arr2;
 }
 // -------------------------------------------------------------------------------------------------------
 module.exports = {findMax , sumNums, reverseArray};
