@@ -20,10 +20,10 @@
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
 //  2- The first letters of the firstName and lastName should be capital letter
 
+// Function definition
 const objLat = (obj) => {
     const { firstName, lastName, age, hobby } = obj;
     
-    // Function to capitalize the first letter of a string
     const capitalizeFirstLetter = (str) => {
         return str[0].toUpperCase() + str.slice(1);
     };
@@ -34,6 +34,14 @@ const objLat = (obj) => {
     return `My name is ${formattedFirstName} ${formattedLastName} I am ${age} YO, and I love ${hobby}.`;
 };
 
+let obj = {
+    firstName: 'Ellie',
+    lastName: 'jon',
+    age: 67,
+    hobby: 'Gaming and Sleeping'
+};
+
+// Output
 console.log(objLat(obj));
 
 // -------------------------------------------------------------------------------------------------------
