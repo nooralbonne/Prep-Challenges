@@ -7,12 +7,12 @@
 //  Write a function that takes an object and returns the formatted text based on the provided object as the example:
 // 
 // Input:
- let obj = {
-     firstName: 'Ellie',
-     lastName: 'jon',
-     age: 67,
-     hobby: 'Gaming and Sleeping'
-  }
+//  let obj = {
+//      firstName: 'Ellie',
+//      lastName: 'jon',
+//      age: 67,
+//      hobby: 'Gaming and Sleeping'
+//  }
 //
 //  Output: "my name is Ellie Jon I am 67 YO, and I love Gaming and Sleeping."
 
@@ -20,29 +20,10 @@
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
 //  2- The first letters of the firstName and lastName should be capital letter
 
-// Function definition
 const objLat = (obj) => {
-    const { firstName, lastName, age, hobby } = obj;
-    
-    const capitalizeFirstLetter = (str) => {
-        return str[0].toUpperCase() + str.slice(1);
-    };
-
-    const formattedFirstName = capitalizeFirstLetter(firstName);
-    const formattedLastName = capitalizeFirstLetter(lastName);
-    
-    return `My name is ${formattedFirstName} ${formattedLastName} I am ${age} YO, and I love ${hobby}.`;
+    // write your code here
 };
-
-let obj = {
-    firstName: 'Ellie',
-    lastName: 'jon',
-    age: 67,
-    hobby: 'Gaming and Sleeping'
-};
-
-// Output
-console.log(objLat(obj));
+// -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 //  Challenge 2:
@@ -59,25 +40,25 @@ console.log(objLat(obj));
 // let cvs = [
 //     {
 //         firstName: "Jason",
-//         LastName: "James",
+//         lastName: "James",
 //         yearsOfExperience: 20,
 //         tech: "JS"
 //     },
 //     {
 //         firstName: "Shira",
-//         LastName: null,
+//         lastName: null,
 //         yearsOfExperience: 5,
 //         tech: ".Net"
 //     },
 //     {
 //         firstName: "Dmitri",
-//         LastName: "Akkerman",
+//         lastName: "Akkerman",
 //         yearsOfExperience: 1,
 //         tech: "Python"
 //     },
 //     {
 //         firstName: "Isabella",
-//         LastName: null,
+//         lastName: null,
 //         yearsOfExperience: 7,
 //         tech: "Java"
 //     }
@@ -101,74 +82,25 @@ console.log(objLat(obj));
 
 //  Note that:
 //  1- Full name is first name + last name
-//  2- If one of the names is null dont add it to the full name
+//  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
-    const formattedCvs = [];
-    for (let i = 0; i < arr.length; i++) {
-        const cv = arr[i];
-        const { firstName, LastName, yearsOfExperience, tech } = cv;
-
-        let fullName = '';
-        if (firstName && LastName) {
-            fullName = `${firstName} ${LastName}`;
-        } else if (firstName) {
-            fullName = firstName;
-        } else if (LastName) {
-            fullName = LastName;
-        }
-
-        if (yearsOfExperience > 1) {
-            formattedCvs.push({
-                fullName,
-                tech
-            });
-        }
-    }
-    return formattedCvs;
+    // write your code here
 };
-
-// Test the function
-let cvs = [
-    {
-        firstName: "Jason",
-        LastName: "James",
-        yearsOfExperience: 20,
-        tech: "JS"
-    },
-    {
-        firstName: "Shira",
-        LastName: null,
-        yearsOfExperience: 5,
-        tech: ".Net"
-    },
-    {
-        firstName: "Dmitri",
-        LastName: "Akkerman",
-        yearsOfExperience: 1,
-        tech: "Python"
-    },
-    {
-        firstName: "Isabella",
-        LastName: null,
-        yearsOfExperience: 7,
-        tech: "Java"
-    }
-];
-
-console.log(cvFormatter(cvs));
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
+//  Challenge 3:
+//  Optional:
+//
 //  Rekey wants to get statistics about the applicants
 //  using the array of objects you will be getting, return an object that has the following properties
 //
 // let result = {
-//     python_Devs: 0,
-//     javaScript_Devs: 0,
-//     dotNet_Devs: 0,
-//     java_Devs: 0,
+//     python_devs: 0,
+//     javaScript_devs: 0,
+//     dotNet_devs: 0,
+//     java_devs: 0,
 //     totalApplicants: 0,
 //     rejectedApplicants: 0,
 // }
@@ -179,61 +111,8 @@ console.log(cvFormatter(cvs));
 //  1- rejectedApplicants are applications that has both the names empty or null and whoever have one year or less of Experience
 
 const applicationsStatics = (arr) => {
-    let result = {
-        python_Devs: 0,
-        javaScript_Devs: 0,
-        dotNet_Devs: 0,
-        java_Devs: 0,
-        totalApplicants: 0,
-        rejectedApplicants: 0,
-    };
-
-    // Iterate through the array using a traditional for loop
-    for (let i = 0; i < arr.length; i++) {
-        const applicant = arr[i];
-        // Count total applicants
-        result.totalApplicants++;
-
-        // Check if both names are empty or null and experience is one year or less
-        if ((!applicant.firstName && !applicant.lastName) && applicant.experience <= 1) {
-            result.rejectedApplicants++;
-        } else {
-            // Check programming language and increment respective count
-            switch (applicant.preferredLanguage) {
-                case 'Python':
-                    result.python_Devs++;
-                    break;
-                case 'JavaScript':
-                    result.javaScript_Devs++;
-                    break;
-                case 'DotNet':
-                    result.dotNet_Devs++;
-                    break;
-                case 'Java':
-                    result.java_Devs++;
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-
-    return result;
+    // write your code here
 };
-
-// Example usage:
-const applicants = [
-    { firstName: 'John', lastName: 'Doe', preferredLanguage: 'Python', experience: 2 },
-    { firstName: 'Alice', lastName: 'Smith', preferredLanguage: 'JavaScript', experience: 1 },
-    { firstName: '', lastName: '', preferredLanguage: 'Java', experience: 1 },
-    { firstName: 'Bob', lastName: 'Johnson', preferredLanguage: 'DotNet', experience: 3 },
-    { firstName: '', lastName: null, preferredLanguage: 'Python', experience: 1 },
-    { firstName: 'Eve', lastName: 'Williams', preferredLanguage: 'JavaScript', experience: 2 }
-];
-
-const stats = applicationsStatics(applicants);
-console.log(stats);
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -247,12 +126,12 @@ console.log(stats);
 //  then change the avg value for the class
 //  Input:
 let data = {
-    SchoolName: "David Academy",
-    Capacity: 1000,
+    schoolName: "David Academy",
+    capacity: 1000,
     grades: [
         {
             grade: "First",
-            numberOFClasses: 3,
+            numberOfClasses: 3,
             classes: [
                 {
                     avg: 0,
@@ -279,7 +158,7 @@ let data = {
         },
         {
             grade: "Second",
-            numberOFClasses: 2,
+            numberOfClasses: 2,
             classes: [
                 {
                     avg: 0,
@@ -299,7 +178,7 @@ let data = {
         },
         {
             grade: "Third",
-            numberOFClasses: 2,
+            numberOfClasses: 2,
             classes: [
                 {
                     avg: 0,
@@ -319,7 +198,7 @@ let data = {
         },
         {
             grade: "Forth",
-            numberOFClasses: 4,
+            numberOfClasses: 4,
             classes: [
                 {
                     avg: 0,
@@ -359,22 +238,8 @@ let data = {
 //  2- You need to round the average to the nearest lower number 
 
 const classesAvg = (data) => {
-    for (let i = 0; i < data.grades.length; i++) {
-        const grade = data.grades[i];
-        for (let j = 0; j < grade.classes.length; j++) {
-            const classItem = grade.classes[j];
-            let sum = 0;
-            for (let k = 0; k < classItem.classScores.length; k++) {
-                sum += classItem.classScores[k];
-            }
-            const avg = Math.floor(sum / classItem.classScores.length);
-            classItem.avg = avg;
-        }
-    }
-    return data;
+    // write your code here
 };
-
-const updatedData = classesAvg(data);
-console.log(updatedData);
 // -------------------------------------------------------------------------------------------------------
 
+module.exports = { objLat, cvFormatter, applicationsStatics, classesAvg };
