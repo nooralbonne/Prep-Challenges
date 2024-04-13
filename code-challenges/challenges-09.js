@@ -21,8 +21,22 @@
 const arrInc = (arr) => {
     let result = [];
     // write your code here
-    arr.forEach((element) => result.push(element+10))
+
+    for(let element of arr)
+    {
+        result.push(element + 10);
+
+    };
+
+    console.log(result);
     return result;
+    // for (let i=0 ; i<arr.length ; i++)
+    // {
+    //     let newArr = [];
+    //     newArr=arr[i]+10;
+    //     result[i] = newArr;
+    // }
+
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -39,10 +53,14 @@ const arrInc = (arr) => {
 //  [5, 6, 7, 7]
 // 
 const roundDecimals = (arr) => {
-    let arr2=[];
-    // write your code here Math.round()
-    arr.forEach((element) => arr2.push(Math.round(element)))
-    return arr2;
+    // write your code here
+    let newArray = [];
+    for(let element of arr)
+    {
+        newArray.push(Math.round(element));
+    };
+    console.log(newArray);
+    return newArray;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -111,36 +129,19 @@ const roundDecimals = (arr) => {
 //
 
 const employeesBonus = (arr) => {
-    arr.forEach(function(element){
-        let salary = parseInt(element.salary.replace('$', ''));
-          if(element.workHours > 8){
-             salary = salary+100;
-          }
-          if(element.workHours <= 8){
-            salary = salary+50;
-          }
-          element.salary = `${salary}$`;
-    });
+    // write your code here
+    for(let element of arr )
+    {
+        if(element.workHours > 8)
+        {
+            element.salary = (parseInt(element.salary)+100) + "$";
+        }
+        else{
+            element.salary = (parseInt(element.salary)+50) + "$";
+        }
+    };
     return arr;
 }
-// const employeesBonus = (arr) => {
-//     return arr.map(employee => {
-//         let salary = parseInt(employee.salary.replace('$', ''));
-//         if (employee.workHours > 8) {
-//             salary += 100;
-//         } else {
-//             salary += 50;
-//         }
-//         employee.salary = `${salary}$`;
-//         return employee;
-//     });
-// };
-// var myarray = [5,6,7,8,9,10];
-// myarray.forEach(function(element){
-//   if(element == 8)
-//     break;
-// });
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
