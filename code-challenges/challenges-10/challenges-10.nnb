@@ -24,22 +24,9 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function birthdayCakeCandles(candles) {\n    let max = candles[0];\n    let count = 0;\n  \n    for (let i = 0; i < candles.length; i++) {\n      if (candles[i] > max) {\n        max = candles[i];\n      }\n    }\n  \n    for (let i = 0; i < candles.length; i++) {\n      if (candles[i] === max) {\n        count++;\n      }\n    }\n  \n    return count;\n  }\n  "
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.error",
-                            "value": {
-                                "name": "Error",
-                                "message": "Failed to generate code object, \n    using;\n^\n\nUnexpected token 'n'",
-                                "stack": ""
-                            }
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "markdown",
