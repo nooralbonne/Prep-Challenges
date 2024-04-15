@@ -100,9 +100,9 @@ const cvFormatter = (arr) => {
 };
 // -------------------------------------------------------------------------------------------------------
 
-// -------------------------------------------------------------------------------------------------------
+//]]] -------------------------------------------------------------------------------------------------------
 //  Challenge 3:
-//  Optional:
+//  Optional:;
 //
 //  Rekey wants to get statistics about the applicants
 //  using the array of objects you will be getting, return an object that has the following properties
