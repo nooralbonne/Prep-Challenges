@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function birthdayCakeCandles(candles) {\n  let max = candles[0];\n  let count = 0;\n  const n = candles.length;\n\n  for (let i = 0; i < n; i++) {\n    if (candles[i] > max) {\n      max = candles[i];\n    }\n  }\n\n  for (let i = 0; i < n; i++) {\n    if (candles[i] === max) {\n      count++;\n    }\n  }\n\n  return count;\n}"
+                "function birthdayCakeCandles(candles) {\n  let max = candles[0];\n  let count = 0;\n\n  for (let i = 0; i < candles.length; i++) {\n      if (candles[i] > max) {\n          max = candles[i];\n      }\n  }\n\n  for (let i = 0; i < candles.length; i++) {\n      if (candles[i] === max) {\n          count++;\n      }\n  }\n\n  return count;"
             ],
             "outputs": []
         },
