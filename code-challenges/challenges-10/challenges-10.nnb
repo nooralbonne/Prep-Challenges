@@ -3,42 +3,42 @@
         {
             "language": "markdown",
             "source": [
-                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block\n"
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
             ],
             "outputs": []
         },
         {
             "language": "markdown",
             "source": [
-                "### **Required**:\n"
+                "### **Required**:"
             ],
             "outputs": []
         },
         {
             "language": "markdown",
             "source": [
-                "##### [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true)\n\nSolution:\n"
+                "#####  [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true)\n\nSolution:"
             ],
             "outputs": []
         },
         {
             "language": "javascript",
             "source": [
-                "function birthdayCakeCandles(candles) {\n  let max = candles[0];\n  let count = 0;\n\n  for (let i = 0; i < candles.length; i++) {\n      if (candles[i] > max) {\n          max = candles[i];\n          count = 1; // Reset count when encountering a new maximum\n      } else if (candles[i] === max) {\n          count++; // Increment count for each occurrence of the maximum\n      }\n  }\n\n  return count;\n}\n"
+                "function birthdayCakeCandles(candles) {\n    let max = candles[0];\n    let count = 0;\n  \n    for (let i = 0; i < candles.length; i++) {\n        if (candles[i] > max) {\n            max = candles[i];\n        }\n    }\n  \n    for (let i = 0; i < candles.length; i++) {\n        if (candles[i] === max) {\n            count++;\n        }\n    }\n  \n    return count;\n  \n  "
             ],
             "outputs": []
         },
         {
             "language": "markdown",
             "source": [
-                "### **Optional**:\n"
+                "### **Optional**:"
             ],
             "outputs": []
         },
         {
             "language": "markdown",
             "source": [
-                "##### [Compare The Triplets](https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true)\n\nSolution:\n"
+                "#####  [Compare The Triplets](https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true)\n\nSolution:"
             ],
             "outputs": []
         },
@@ -52,14 +52,14 @@
         {
             "language": "markdown",
             "source": [
-                "##### [Migratory Birds](https://www.hackerrank.com/challenges/migratory-birds/problem?isFullScreen=true)\n\nSolution:\n"
+                "#####  [Migratory Birds](https://www.hackerrank.com/challenges/migratory-birds/problem?isFullScreen=true)\n\nSolution:"
             ],
             "outputs": []
         },
         {
             "language": "javascript",
             "source": [
-                "function birthdayCakeCandles(candles) {\n  let max = candles[0];\n  let count = 0;\n\n  for (let i = 0; i < candles.length; i++) {\n    if (candles[i] > max) {\n      max = candles[i];\n    }\n  }\n\n  for (let i = 0; i < candles.length; i++) {\n    if (candles[i] === max) {\n      count++;\n    }\n  }\n\n  return count;\n}\n"
+                ""
             ],
             "outputs": []
         }
